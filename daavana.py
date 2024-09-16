@@ -3,7 +3,7 @@ class daavana:
         self.name=name
         self.cena=cena
     def output(self):
-        print (f"Dāvana nosaukums: {self.name}, Cena: {self.cena}")
+        print (f"Dāvana nosaukums: {self.name}, Cena: {self.cena} euro")
 
 p=daavana()
 p.set("Grāmata", 15)
