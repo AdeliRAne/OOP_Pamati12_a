@@ -29,7 +29,7 @@ class Teacher(Person):
 people_arr=[Student("Tom", 15, 4.5), Teacher("Lina", 30), Student('Bob', 36, 4.7)]
 
 for person in people_arr:
-    introduce(person) # type: ignore
+    introduce(person)
 
 p1=Student("Tom", 16)
 t1=Teacher("Alina", 31)
