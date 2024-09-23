@@ -1,22 +1,3 @@
-"""
-class Shape:
-    def area(self):
-        pass
-
-    def perimetrs(self):
-        pass
-
-class Rectangle(Shape):
-    def area_laukums(self):
-        return 
-        
-
-
-class Circle(Shape):
-    def area_laukums(self):
-
-"""
-
 class Shape:
     def __init__(self, a, b):
         self.pirmamala= a
