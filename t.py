@@ -1,3 +1,4 @@
+#polimorfisms metode
 class Animal:
     legs = 4
     tail = 1
