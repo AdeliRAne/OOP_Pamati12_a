@@ -1,8 +1,9 @@
+#Deju pulciņa uzskaites sistēma
 import itertools
 from datetime import time
 
 class Klients:
-    id_iter = itertools.count(1) #Айди будет с начинатся с 1
+    id_iter = itertools.count(1) #Айди начинается с 1
 
     def __init__(self, vaards, uzvaards, vecums, personalais_kods, adrese, cena_par_men, dienas, nodarbiiba_laiks):
         self.Klienta_id = next(self.id_iter)
