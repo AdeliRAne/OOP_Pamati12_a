@@ -32,11 +32,10 @@ class Klients:
     def nodarbiiba_laiks_info(self, cena_par_men, diena, nodarbiiba_laiks):
         print(f"Cena par mēnesi: {self.cena_par_men} EUR")
         print("Dienas, kad notiek nodarbības: " + ", ".join(self.dienas))
-        print(f"Nodarbību laiks: {self.nodarbiiba_laiks.strftime('%H:%M')}")
+        print(f"Nodarbību laiks: {self.nodarbiiba_laiks.strftime('%H:%M')}") #%H - Час (24-часовой формат) 00,23 un %M - Число минут 00,59 // [https://letpy.com/handbook/datetime/]
         print("-" * 100)
        
 class Vecaaks:
-    
     def __init__(self, vaards, uzvaards, tel_number):
         self.Vecaaka_vaards = vaards
         self.Vecaaka_uzvaards = uzvaards
@@ -57,3 +56,24 @@ k1.nodarbiiba_laiks_info(25, ["Pirmdiena", "Trešdiena", "Piektdiena"], time(16,
 
 v1 = Vecaaks("Artemijs", "Suškovs", "+371 23345678")
 v1.Vecaaks_info_print()
+#-----------------------------------------------------------------------
+k2 = Klients("Vlada", "Stirāns", "5", "150119-24352", "Rēzekne, Rezonta iela 1", 25, ["Pirmdiena", "Trešdiena", "Piektdiena", "Sestdiena"], time(16, 30))
+print("-" * 100)
+print(f"Klienta ID: {k2.Klienta_id}")
+print("-" * 100)
+k2.Klienta_info_print()
+k2.nodarbiiba_laiks_info(25, ["Pirmdiena", "Trešdiena", "Piektdiena"], time(16, 30))
+
+v2 = Vecaaks("Lina", "Stirāne", "+371 20394000")
+v2.Vecaaks_info_print()
+#-----------------------------------------------------------------------
+k3 = Klients("Nikita", "Vilons", "4", "280620-20424", "Rēzekne, Rezonta iela 1", 25, ["Pirmdiena", "Trešdiena", "Piektdiena", "Sestdiena"], time(16, 30))
+print("-" * 100)
+print(f"Klienta ID: {k3.Klienta_id}")
+print("-" * 100)
+k3.Klienta_info_print()
+k3.nodarbiiba_laiks_info(25, ["Pirmdiena", "Trešdiena", "Piektdiena"], time(16, 30))
+
+v3 = Vecaaks("Elezoveta", "Vilona", "+371 25644472")
+v3.Vecaaks_info_print()
+#[from datetime import time] - https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python

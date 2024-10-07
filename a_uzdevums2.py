@@ -70,13 +70,7 @@ class Izmantosana:
     Izmantosana_id = 0
 
     id_iter_izmantosana = itertools.count()
-    def __init__(self, _vaards, _uzvaards, _pk, _tel_numurs):
-        self.Klienta_id = next(self.id_iter_kl) + 1
-        self.Klienta_vaards = _vaards
-        self.Klienta_uzvaards = _uzvaards
-        self.Klienta_PK = _pk
-        self.Klienta_tel_numurs = _tel_numurs
-        
+
     def Cena_kopa(self):
         kopeja_cena = self.Izmantosana_cena_stunda * ((
             (self.Pakalpojuma_beigu_laiks - self.Pakalpojuma_saakuma_laiks)))
