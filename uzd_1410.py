@@ -17,7 +17,7 @@ class Skolens(Person):
     def person_info(self):
         print (f"Vārds: {self.vaards}; Vecums: {self.vecums} gadi; Klase: {self.klase}")
 
-class Skolotais(Person):
+class Skolotajs(Person):
     def __init__(self, vaards, vecums, uzvaards):
         super().__init__(vaards, vecums)
         self.uzvaards = uzvaards
@@ -33,5 +33,5 @@ p1.apsveikt()
 p2=Skolens('Artjom', 13, '7.b')
 p2.person_info()
 
-p3=Skolotais("Elena", 45, "Bērzova")
+p3=Skolotajs("Elena", 45, "Bērzova")
 p3.person_info()
