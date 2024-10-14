@@ -24,4 +24,3 @@ d=person()
 d.set("Alesja", 18)
 d.output()
 
-

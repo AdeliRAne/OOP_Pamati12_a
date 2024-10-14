@@ -5,7 +5,7 @@ class Car:
 
   def move(self):
     print("Drive!")
-
+ 
 class Boat:
   def __init__(self, brand, model):
     self.brand = brand
@@ -13,7 +13,6 @@ class Boat:
 
   def move(self):
     print("Sail!")
-
 
 car1 = Car("Ford", "Mustang")       #Create a Car class
 boat1 = Boat("Ibiza", "Touring 20") #Create a Boat class

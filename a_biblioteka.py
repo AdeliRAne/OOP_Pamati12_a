@@ -23,11 +23,11 @@ table=PrettyTable()
 table.field_names= ['Name', 'Age', 'City']
 table.add_row (['Tom', '15', 'Riga'])
 print(table)
-"""
+
 
 #Графики
 import matplotlib.pyplot as plt
 
 plt.plot([1, 2, 3, 4])
 plt.ylabel('Funkcijas grafiks')
-plt.show()
+plt.show()"""

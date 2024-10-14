@@ -22,7 +22,6 @@ class KitchenTable(Table):
 #       Table.__init__(l, w, h)
         super(). __init__(l, w, h)
         self.places = p
-  
 
 
 #----------------------------------------------------------------
