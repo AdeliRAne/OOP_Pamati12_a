@@ -198,5 +198,84 @@ def get_student():
     return Student(name, house)
 
 if __name__ == "__main__":
-    main() """
+    main() 
 #-------------------------------------------------------------------------
+#Šeit ir piemērs, kā neizmantot klases metodi. Termināļa logā ierakstiet  code 
+#hat.py un kodējiet šādi:
+import random
+
+class Hat:
+    def __init__(self):
+        self.houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+    def sort(self, name):
+        print(name, "is in", random.choice(self.houses))
+
+
+hat = Hat()
+hat.sort("Harry") 
+#-------------------------------------------------------------------------
+#Tomēr mēs varam vēlēties palaist kārtošanas funkciju, 
+# neveidojot konkrētu kārtošanas cepures instanci 
+# (galu galā ir taču tikai viena cepure!). Mēs varam modificēt savu kodu šādi:
+import random
+class Hat:
+
+    houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
+
+    @classmethod
+    def sort(cls, name):
+        print(name, "is in", random.choice(cls.houses))
+
+Hat.sort("Harry") 
+#-------------------------------------------------------------------------
+#Mēs varam modificēt savu kodu šādi, 
+#risinot dažas neizmantotās iespējas saistībā ar @classmethod:
+class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+    def __str__(self):
+        return f"{self.name} from {self.house}"
+
+    @classmethod
+    def get(cls):
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house)
+
+def main():
+    student = Student.get()
+    print(student)
+
+if __name__ == "__main__":
+    main() 
+#-------------------------------------------------------------------------
+class Wizard:
+    def __init__(self, name):
+        if not name:
+            raise ValueError("Missing name")
+        self.name = name  
+    ...
+
+class Student(Wizard):
+    def __init__(self, name, house):
+        super().__init__(name)
+        self.house = house
+    ...
+
+
+class Professor(Wizard):
+    def __init__(self, name, subject):
+        super().__init__(name)
+        self.subject = subject
+
+    ...
+
+wizard = Wizard("Albus")
+student = Student("Harry", "Gryffindor")
+professor = Professor("Severus", "Defense Against the Dark Arts")
+...""" 
+#-------------------------------------------------------------------------
+
