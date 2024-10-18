@@ -114,7 +114,7 @@ def get_student():
 
 
 if __name__ == "__main__":
-    main() """
+    main() 
 #-----------------------------------------------
 class Student:
     ...
@@ -128,6 +128,44 @@ def get_student():
     student.house = input("House: ")
     return student
 
+if __name__ == "__main__":
+    main()
+#-----------------------------------------------
+#Turklāt mēs varam izveidot pamatu atribūtiem, kas ir sagaidāmi objektā, kura klase ir Student. Mēs varam modificēt savu kodu šādi:
+
+class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+def main():
+    student = get_student() 
+    print(f"{student.name} from {student.house}")
+
+def get_student():                 #return objrekt, jeb class
+    name = input("Name: ")
+    house = input("House: ")
+    student = Student(name, house)
+    return student
+
 
 if __name__ == "__main__":
-    main() 
+    main()  
+#-----------------------------------------------
+class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+def main():
+    student = get_student()
+    print(f"{student.name} from {student.house}")
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name, house)
+
+if __name__ == "__main__":
+    main() """
+#-----------------------------------------------
