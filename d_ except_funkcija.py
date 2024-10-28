@@ -40,7 +40,7 @@ def read_file():
         print("Faila apstrāde pabeigta.")
 
 read_file()
-"""
+
 #Calculator klases defiņicija
 class Calculator():
     def __init__(self, num1, num2):
@@ -75,3 +75,4 @@ print(p1.sum1())
 print(p1.atniemsana())
 print(p1.reizinasana())
 print(p1.dalisana())
+"""
