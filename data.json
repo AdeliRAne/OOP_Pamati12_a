@@ -1,5 +1,12 @@
-{
-    "name": "Alina",
-    "age": "19",
-    "city": "R\u0113zekne"
-}
+[
+    {
+        "name": "adelina",
+        "age": "19",
+        "city": "rezekne"
+    },
+    {
+        "name": "al\u012bna",
+        "age": "18",
+        "city": "riga"
+    }
+]
