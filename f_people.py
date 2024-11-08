@@ -8,7 +8,7 @@ for person in data:
     if person["age"] > 18:
         print(person["name"])
 
-new_person = {"name":"Laura"}
+new_person = {"name":"Laura", "age":13, "city": "Rēzekne"} #jaunas data pierakstīšana
 data.append(new_person)
 with open ('people.json', 'w', encoding="utf-8") as file:
     json.dump(data, file, indent=4)

@@ -1,6 +1,6 @@
 import json
 """"""
-#Ieraksta tikai vienu cilvēku
+#Vairāk cilvēku ieraksts
 try:
     with open ('user_data.json', 'r', encoding="utf-8") as file:
         data = json.load(file) 
@@ -18,11 +18,11 @@ while True:
     "city" : city
     })
     another = input("VAi vēlies pievienot vēl vienu cilvēku? (jā/nē)").strip().lower()
-    if another !="jā":
+    if another !="jā": #"!=" неравно
         break
 
 with open ('data.json', 'w', encoding="utf-8") as file:
-    json.dump(data, file, indent=4) 
+    json.dump(data, file, indent=4)
 print("Dati ir veiksmīgi saglabāti JSON failā!")
 
  
