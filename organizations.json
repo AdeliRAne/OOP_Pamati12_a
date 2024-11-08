@@ -1,9 +1,21 @@
 {
     "organizations": [
         {
-            "name": "& c:/Users/Skolotajs/Documents/GitHub/OOP_Pamati12_a/.venv/Scripts/python.exe c:/Users/Skolotajs/Documents/GitHub/OOP_Pamati12_a/ORGANISATION/organisatons2.py",
-            "adress": "1",
-            "id": "13",
+            "name": "LMT",
+            "adress": "s",
+            "id": "4",
+            "contacts": []
+        },
+        {
+            "name": "TMT",
+            "adress": "a1",
+            "id": "1",
+            "contacts": []
+        },
+        {
+            "name": "TL2",
+            "adress": "b2",
+            "id": "2",
             "contacts": []
         }
     ]

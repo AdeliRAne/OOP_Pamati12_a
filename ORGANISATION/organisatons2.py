@@ -6,6 +6,7 @@ def load_data():
     data=json.load(file)
     file.close()
     global organizations
+    organizations=data['organizations']
     print('DATI PIEVIENOTI')
 def add_organization():
     organization_name =input('Organizācijas nosaukums: ')
