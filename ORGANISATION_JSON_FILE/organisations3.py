@@ -46,8 +46,8 @@ def print_organization():
 def save_data():
     data = {'organizations': organizations}
     print('SAGLĀBA DATUS.....')
-    file = open('organizations.json', 'w')
-    json.dump(data, file, indent=4)
+    file = open('organizations.json', 'w',encoding="utf-8")
+    json.dump(data, file,ensure_ascii=False, indent=4)
     print("DATI SAGLĀBATI")
 def find_organization_by_id():
     organization_id=input('Ievadiet organizācijas ID: ')
@@ -60,12 +60,18 @@ def find_organization_by_id():
 def count_organizations():
     print(f"Kopējais organizāciju sk: {len(organizations)}")
 
-
-
 def list_organization_ids():
     print("Visu organizāciju ID saraksti: ")
     for organization in organizations:
-        print(f"{organization['id']}: {organization['name']}")
+        print(f"ID_{organization['id']}: {organization['name']}")
+
+def delete_organization_by_id():
+    organization_id=input('Ievadiet organizācijas ID, kuru grib dzēst: ')
+    for  organization in organizations:
+        if organization['id']==organization_id:
+            print(organization)
+            organizations.remove(organization)
+#            del organization
 
 def main():
     load_data()
@@ -75,7 +81,7 @@ def main():
     list_organization_ids()
     find_organization_by_id()    
     while(True):
-        response=input('(1) - Pievieno organizāciju // (2) - Izvada organzāciju // (3) - Beigt:   ')
+        response=input('(1) - Pievieno organizāciju // (2) - Izvada organzāciju // (3) - Beigt // (4) - Dzēst organizāciju ')
         if response =='1':
             add_organization()
         elif response =='2':
@@ -84,6 +90,9 @@ def main():
             save_data()
             print('Paldies, par darbu!')
             exit()
+        elif response =='4':
+            delete_organization_by_id()
+            print("organizācija dzēsta")
         else:
             print("Izvele skaitļu 1, 2 vai 3")
             continue
