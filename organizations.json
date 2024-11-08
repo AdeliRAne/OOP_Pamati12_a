@@ -5,6 +5,12 @@
             "adress": "skola10",
             "id": "12",
             "contacts": []
+        },
+        {
+            "name": "BITE",
+            "adress": "pils1",
+            "id": "11",
+            "contacts": []
         }
     ]
 }

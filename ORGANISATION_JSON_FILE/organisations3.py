@@ -70,8 +70,8 @@ def delete_organization_by_id():
     for  organization in organizations:
         if organization['id']==organization_id:
             print(organization)
-            organizations.remove(organization)
-#            del organization
+            #organizations.remove(organization)
+            del organizations
 
 def main():
     load_data()
