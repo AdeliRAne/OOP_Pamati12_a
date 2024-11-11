@@ -11,6 +11,18 @@
             "adress": "pils1",
             "id": "11",
             "contacts": []
+        },
+        {
+            "name": "LMTII",
+            "adress": "pils1",
+            "id": "1",
+            "contacts": [
+                {
+                    "name": "Adelina",
+                    "position": "sola10",
+                    "id": "1"
+                }
+            ]
         }
     ]
 }

@@ -3,7 +3,7 @@ import itertools
 from datetime import time
 
 class Klients:
-    id_iter = itertools.count(1) #Айди начинается с 1
+    id_iter = itertools.count(1) 
 
     def __init__(self, vaards, uzvaards, vecums, personalais_kods, adrese, cena_par_men, dienas, nodarbiiba_laiks):
         self.Klienta_id = next(self.id_iter)
@@ -76,4 +76,8 @@ k3.nodarbiiba_laiks_info(25, ["Pirmdiena", "Trešdiena", "Piektdiena"], time(16,
 
 v3 = Vecaaks("Elezoveta", "Vilona", "+371 25644472")
 v3.Vecaaks_info_print()
+
+
+
+#Atsauces
 #[from datetime import time] - https://pythonru.com/primery/kak-ispolzovat-modul-datetime-v-python

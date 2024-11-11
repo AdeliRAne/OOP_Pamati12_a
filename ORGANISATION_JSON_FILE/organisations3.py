@@ -57,6 +57,14 @@ def find_organization_by_id():
             print(f"{organization['name']}({organization['id']})")
             break
 
+def find_contact():
+    contact_id=input('Ievadiet cilvēka ID: ')
+    for organization in organizations:
+        for contact in organization['contacts']:
+            print('---DARBNIEKS---')
+            print(f"{contact['name']}({contact['id']})")
+            break    
+
 def count_organizations():
     print(f"Kopējais organizāciju sk: {len(organizations)}")
 
@@ -70,16 +78,18 @@ def delete_organization_by_id():
     for  organization in organizations:
         if organization['id']==organization_id:
             print(organization)
-            #organizations.remove(organization)
-            del organizations
+            organizations.remove(organization)
+
 
 def main():
     load_data()
-    print("-"*10)
+    print("-"*100)
     count_organizations()
-    print("-"*10)
+    print("-"*100)
     list_organization_ids()
-    find_organization_by_id()    
+    print("-"*100)
+    find_organization_by_id()
+    find_contact()    
     while(True):
         response=input('(1) - Pievieno organizāciju // (2) - Izvada organzāciju // (3) - Beigt // (4) - Dzēst organizāciju ')
         if response =='1':

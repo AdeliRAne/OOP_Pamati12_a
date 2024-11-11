@@ -1,0 +1,43 @@
+{
+    "organizations": [
+        {
+            "name": "lina",
+            "phone": "20228745",
+            "city": "Rezekne",
+            "id": "1",
+            "contacts": [
+                {
+                    "time": "2",
+                    "daudzums": "5",
+                    "id": "1"
+                }
+            ]
+        },
+        {
+            "name": "Alina",
+            "phone": "20293941",
+            "city": "Rezekne",
+            "id": "5",
+            "contacts": [
+                {
+                    "time": "2",
+                    "daudzums": "2",
+                    "id": "5"
+                }
+            ]
+        },
+        {
+            "name": "Vlad",
+            "phone": "22345231",
+            "city": "Rezekne",
+            "id": "56",
+            "contacts": [
+                {
+                    "time": "2",
+                    "daudzums": "2",
+                    "id": "77"
+                }
+            ]
+        }
+    ]
+}
