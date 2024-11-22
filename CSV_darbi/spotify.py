@@ -11,7 +11,6 @@ with open("spotify.csv", "r") as f:
     print(titles[1::])
     print(list(set(year[1::])))
 """
-
 import json
 songs=[]
 years=[]

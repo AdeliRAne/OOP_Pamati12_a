@@ -43,7 +43,7 @@ while(True):
             print('---ORGANIZATION---')
             print(f"{organization['name']} ({organization['id']})")
             print(f"Tālrunis:{organization['phone']}")
-            print(f"Pilsēta: {organization['city']}")
+            print(f"Pilsēta: {organization}")
             print(f"Kontaktu skaits: {len(organization['contacts'])}")
     elif response=='3':
         data = {

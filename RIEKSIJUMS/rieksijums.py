@@ -1,0 +1,14 @@
+import sqlite3
+conn = sqlite3.connect('veikals.db')
+cursor = conn.cursor()
+
+cursor.execute("""SELECT Klienti.vards, PAsutijums.datums, Produkti.nosaukums, Produkti.cena, Detaljas.daudzums FROM Klienti
+INNER JOIN Pasutijums ON Klienti.klienta_id=Pasutijums.klienta_id                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+INNER JOIN Detaljas ON Detaljas.pasuutijums_id=Pasutijums.pasuutijums_id
+INNER JOIN Produkti ON Produkti.produkts_id=Detaljas.produkts_id""")
+orders = cursor.fetchall()
+print('Pasūtijumi: ')
+for order in orders:
+    print(order)
+
+conn.close()
